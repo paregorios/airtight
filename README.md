@@ -37,7 +37,14 @@ POSITIONAL_ARGUMENTS = [
     ['foovar', str, 'some input value that you want']
 ]
 
-# your additional code here
+
+def main(**kwargs):
+    """Main function of your script.
+
+    kwargs -- keyword arguments as parsed from the command line
+    """
+    # your additional code here
+
 
 if __name__ == "__main__":
     main(**configure_commandline(
