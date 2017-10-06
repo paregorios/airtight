@@ -1,4 +1,8 @@
-"""command line components"""
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Easily initialize logging level and command-line arguments for a script.
+"""
 from airtight.logging import configure_logging
 import argparse
 import inspect
@@ -8,8 +12,23 @@ import sys
 
 def configure_commandline(
         optional_arguments, positional_arguments, default_log_level):
-    """
-    define and parse command line arguments
+    """Define and parse command line arguments
+
+    Keyword arguments:
+    optional_arguments -- a list of lists; each internal list defines an
+        optional argument:
+            short name (str)
+            long name (str)
+            default value,
+            help string (str),
+            required? (boolean)
+    positional_arguments -- a list of lists; each internal list defines a
+        positional argument:
+            name (str)
+            type (python type like "str", "int")
+            help string (str)
+    default_log_level -- an importance/severity level as defined by the Python
+        "logging" module (e.g., logging.DEBUG, logging.INFO)
     """
     frame = inspect.currentframe().f_back
     module = inspect.getmodule(frame)
