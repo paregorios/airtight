@@ -8,24 +8,25 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='airtight',
     version='0.1',
-    description='change me',
+    description='Components for scripts in python 3.6+',
     long_description=long_description,
-    url='http://change.me',
-    author='Change Me',
-    author_email='change@me.org',
+    url='http://www.paregorios.org/airtight/',
+    author='Tom Elliott',
+    author_email='tom.elliott@nyu.edu',
     license='LICENSE.txt',
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
         'Topic :: Change Me',
-        'License :: License :: OSI Approved :: GNU Affero General Public License v3'
+        'License :: License :: OSI Approved :: GNU Affero General Public '
+        'License v3'
     ],
-    keywords='"change me", "please change me',
+    keywords='scripting',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
 
     # Alternatively, if you want to distribute just a my_module.py, uncomment
     # this:
