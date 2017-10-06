@@ -1,7 +1,6 @@
 """command line components"""
 from airtight.logging import configure_logging
 import argparse
-import better_exceptions
 import inspect
 import logging
 import sys
