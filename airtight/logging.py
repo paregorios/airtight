@@ -1,4 +1,8 @@
-"""configure logging for script"""
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Easily configure logging for a script
+"""
 
 import inspect
 import logging
@@ -6,8 +10,17 @@ import sys
 
 
 def configure_logging(args, default=logging.WARNING):
-    """
-    set logging levels based on defaults and command-line arguments
+    """Set logging levels based on defaults and command-line arguments
+
+    Keyword arguments:
+    args -- an argparse.Namespace object that may contain one or more of the
+            following arguments:
+                loglevel -- a severity/importance level from "logging"
+                verbose -- True = logging.INFO is the desired level
+                veryverbose -- True = logging.DEBUG is the desired level
+    default -- a severity/importance level from the logging module that is to
+               be used as the default logging level; it may be overridden by
+               values provided in "args."
     """
     if args.loglevel is not 'NOTSET':
         args_log_level = ''.join(args.loglevel.upper().split())
@@ -39,7 +52,13 @@ def configure_logging(args, default=logging.WARNING):
 
 
 def flog(var, level=logging.DEBUG, comment=None):
-    """ log a variable's name and value """
+    """Easily log a variable's name and value
+
+    Keyword arguments:
+    var -- the variable to log
+    level -- the desired severity/importance level from the logging module
+    comment -- an optional comment to postfix to the logged output
+    """
     logger = logging.getLogger(sys._getframe(1).f_code.co_name)
     callers_local_vars = inspect.currentframe().f_back.f_locals.items()
     names = [
