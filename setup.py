@@ -15,10 +15,10 @@ except ImportError:
 
 setup(
     name='airtight',
-    version='0.1',
+    version='0.2.0a2',
     description='Components for scripts in python 3.6+',
     long_description=long_description,
-    url='http://www.paregorios.org/airtight/',
+    url='https://github.com/paregorios/airtight',
     author='Tom Elliott',
     author_email='tom.elliott@nyu.edu',
     license='LICENSE.txt',
@@ -36,7 +36,9 @@ setup(
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    packages=['airtight']
+    packages=['airtight'],
+
+    python_requires='~=3.6',
 
     # Alternatively, if you want to distribute just a my_module.py, uncomment
     # this:
