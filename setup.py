@@ -15,7 +15,7 @@ except ImportError:
 
 setup(
     name='airtight',
-    version='0.2.0a2',
+    version='0.2.0a3',
     description='Components for scripts in python 3.6+',
     long_description=long_description,
     url='https://github.com/paregorios/airtight',
