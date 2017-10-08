@@ -4,9 +4,14 @@ import airtight
 from os import path
 
 here = path.abspath(path.dirname(__file__))
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
-
+readme_file = path.join(here, 'README.md')
+try:
+    from m2r import parse_from_file
+    long_description = parse_from_file(readme_file)
+except ImportError:
+    # m2r may not be installed in user environment
+    with open(readme_file, encoding='utf-8') as f:
+        long_description = f.read()
 
 setup(
     name='airtight',
@@ -21,8 +26,7 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'License :: License :: OSI Approved :: GNU Affero General Public '
-        'License v3',
+        'License :: OSI Approved :: GNU Affero General Public License v3',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
