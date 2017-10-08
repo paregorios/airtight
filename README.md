@@ -4,6 +4,12 @@ If you're going to ```import antigravity```, you'd better make sure the hatch is
 
 The **airtight** package is written for Python 3.6+. It provides idiosyncratic code that somewhat simplifies the creation and debugging of command-line python scripts.
 
+## installing
+
+```
+pip install airtight
+```
+
 ## simpler than a template
 
 Instead of copying some 50-line template for your python script and then writing a bunch of calls to [argparse](https://docs.python.org/3/library/argparse.html) and [logging](https://docs.python.org/3/library/logging.html) just build some lists describing the arguments and logging level you want and invoke ```artight.cli.configure_commandline()```:
