@@ -1,6 +1,6 @@
 # airtight
 
-It you're going to ```import antigravity```, you'd better make sure the hatch is closed.
+If you're going to ```import antigravity```, you'd better make sure the hatch is closed.
 
 The **airtight** package is written for Python 3.6+. It provides idiosyncratic code that somewhat simplifies the creation and debugging of command-line python scripts.
 
