@@ -1,10 +1,13 @@
-from setuptools import setup, find_packages
+from distutils.core import setup
 from codecs import open
+import airtight
 from os import path
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
+
+
 setup(
     name='airtight',
     version='0.1',
@@ -16,17 +19,20 @@ setup(
     license='LICENSE.txt',
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'Topic :: Change Me',
         'License :: License :: OSI Approved :: GNU Affero General Public '
-        'License v3'
+        'License v3',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Topic :: Software Development :: Libraries :: Python Modules'
     ],
     keywords='scripting',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+    packages=['airtight']
 
     # Alternatively, if you want to distribute just a my_module.py, uncomment
     # this:
