@@ -3,6 +3,8 @@
 """
 Easily initialize logging level and command-line arguments for a script.
 """
+
+
 from airtight.logging import configure_logging
 import argparse
 import inspect
@@ -29,6 +31,9 @@ def configure_commandline(
             help string (str)
     default_log_level -- an importance/severity level as defined by the Python
         "logging" module (e.g., logging.DEBUG, logging.INFO)
+
+    Returns a dictionary of named arguments, parsed from the command line
+    in accordance with the definitions provided in the other arguments.
     """
     frame = inspect.currentframe().f_back
     module = inspect.getmodule(frame)
